@@ -1,18 +1,10 @@
 package avaj.simulator;
 
-// import ...
-
-
-
-
-
-
-
-
+import java.io.BufferedReader;
 
 public class Simulator {
 	private static WeatherTower weatherTower;
-	private static List<Flyable> flyables = new ArrayList<~>();
+	private static List<Flyable> flyables = new ArrayList<>();
 
 
 	public static void main(String[] arg) throws InterruptedException {
