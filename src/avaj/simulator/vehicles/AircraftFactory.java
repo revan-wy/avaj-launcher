@@ -16,7 +16,7 @@ public class AircraftFactory {
                     newFlyable = new Helicopter(name, coordinates);
                     break;
                 case "JetPlane":
-                    newFlyable = new jetPlane(name, coordinates);
+                    newFlyable = new JetPlane(name, coordinates);
                     break;
                 case "Balloon":
                     newFlyable = new Balloon(name, coordinates);
