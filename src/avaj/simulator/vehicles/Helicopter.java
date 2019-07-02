@@ -2,7 +2,9 @@ package avaj.simulator.vehicles;
 
 import avaj.simulator.WeatherTower;
 
-public class Helicopter {
+import avaj.weather.*;
+
+public class Helicopter extends Aircraft implements Flyable {
     private WeatherTower weatherTower;
 
     Helicopter(String name, Coordinates coordinates) {
@@ -14,6 +16,6 @@ public class Helicopter {
     }
 
     public void registerTower(WeatherTower weatherTower) {
-        
+
     }
 }

@@ -10,15 +10,16 @@ public class AircraftFactory {
         int latitude,
         int height) {
             Coordinates coordinates = Coordinates.coordinateMaker(longitude, latitude, height);
+            Flyable newFlyable;
             switch(type) {
                 case "Helicopter":
-                    Flyable newFlyable = new Helicopter(name, coordinates);
+                    newFlyable = new Helicopter(name, coordinates);
                     break;
                 case "JetPlane":
-                    Flyable newFlyable = new jetPlane(name, coordinates);
+                    newFlyable = new jetPlane(name, coordinates);
                     break;
                 case "Balloon":
-                    Flyable newFlyable = new Balloon(name, coordinates);
+                    newFlyable = new Balloon(name, coordinates);
                     break;
                 default:
                     System.out.println("\'" + type + "\'' is not a valid type.");
