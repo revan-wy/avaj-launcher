@@ -5,18 +5,18 @@ import avaj.weather.Coordinates;
 public class WeatherTower extends Tower {
     public String getWeather(Coordinates coordinates) {
         Random rand = new Random();
-        int value = rand.nextInt(4) + 1;
+        int value = rand.nextInt(4);
         switch(value) {
-            case 1: //sun
+            case 0:
                 return "SUN";
                 break;
-            case 2: //rain
+            case 1:
                 return "RAIN";
                 break;
-            case 3: //fog
+            case 2:
                 return "FOG";
                 break;
-            case 4: //snow
+            case 3:
                 return "SNOW";
                 break;
             // default:
