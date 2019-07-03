@@ -1,6 +1,7 @@
 package avaj.simulator;
 
 import avaj.weather.Coordinates;
+import java.util.Random;
 
 public class WeatherTower extends Tower {
     public String getWeather(Coordinates coordinates) {
