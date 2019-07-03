@@ -36,6 +36,7 @@ public class Simulator {
                     weatherTower.changeWeather();
                 }
             }
+            reader.close();
         } catch (FileNotFoundException e) {
             System.out.println("Couldn't find file " + arg[0]);
         } catch (IOException e) {
