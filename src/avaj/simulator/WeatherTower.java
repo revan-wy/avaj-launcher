@@ -10,18 +10,18 @@ public class WeatherTower extends Tower {
         switch(value) {
             case 0:
                 return "SUN";
-                break;
+                // break;
             case 1:
                 return "RAIN";
-                break;
+                // break;
             case 2:
                 return "FOG";
-                break;
+                // break;
             case 3:
                 return "SNOW";
-                break;
-            // default:
-            //     return "SUN";
+                // break;
+            default:
+                return "SUN";
         }
     }
 

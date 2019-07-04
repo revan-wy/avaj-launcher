@@ -2,7 +2,6 @@ package avaj.simulator;
 
 import java.io.*;
 import java.util.*;
-import java.util.logging.Logger;
 
 import avaj.simulator.vehicles.*;
 
