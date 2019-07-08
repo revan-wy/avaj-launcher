@@ -13,7 +13,7 @@ public class Tower {
 
     public void register(Flyable flyable) {
         // observers.add(flyable);
-        // System.out.println("Tower says: " + flyable.type + "#" + flyable.id + "(" + flyable.idCounter + ") registered to weather tower.");
+        // System.out.println("Tower says: " + flyable.type + "#" + flyable.name + "(" + flyable.id + ") registered to weather tower.");
         // Tower says: Baloon#B1(1) registered to weather tower.
     }
 
