@@ -28,11 +28,11 @@ public class Simulator {
                 }
 
                 for (Flyable flyable : flyables) {
-                    flyable.registerTower(weatherTower);
+                    flyable.registerTower(weatherTower); // Tower says: Baloon#B1(1) registered to weather tower.
                 }
 
                 for (int i = 1; i <= simulations; i++) {
-                    weatherTower.changeWeather();
+                    weatherTower.changeWeather(); // Baloon#B1(1): Let's enjoy the good weather and take some pics.
                 }
             }
             reader.close();
