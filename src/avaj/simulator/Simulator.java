@@ -31,6 +31,8 @@ public class Simulator {
                     flyable.registerTower(weatherTower); // Tower says: Baloon#B1(1) registered to weather tower.
                 }
 
+                weatherTower.getObservers();
+
                 for (int i = 1; i <= simulations; i++) {
                     weatherTower.changeWeather(); // Baloon#B1(1): Let's enjoy the good weather and take some pics.
                 }
