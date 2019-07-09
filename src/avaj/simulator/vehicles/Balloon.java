@@ -13,7 +13,17 @@ public class Balloon extends Aircraft implements Flyable {
     }
 
     public void updateConditions() {
-		
+        String weather = weatherTower.getWeather(this.coordinates);
+        switch(weather) {
+            print message;
+            update coordinates;
+        }
+        if height > 100 {
+            height = 100;
+        } else if height < 1 {
+            land aircraft;
+        }
+        
 	}
 
     public void registerTower(WeatherTower weatherTower) {

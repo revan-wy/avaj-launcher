@@ -5,6 +5,7 @@ import java.util.Random;
 
 public class WeatherTower extends Tower {
     public String getWeather(Coordinates coordinates) {
+        fix this to give same weather at given coords throughout simulation;
         Random rand = new Random();
         int value = rand.nextInt(4);
         switch(value) {
