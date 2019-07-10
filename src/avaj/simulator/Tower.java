@@ -11,6 +11,7 @@ import avaj.simulator.vehicles.Flyable;
 
 public class Tower {
     private List<Flyable> observers = new ArrayList<Flyable>();
+    public List<Flyable> toRemove = new ArrayList<Flyable>();
 
     public void register(Flyable flyable) {
         observers.add(flyable);
@@ -20,14 +21,18 @@ public class Tower {
     }
 
     public void unregister(Flyable flyable) {
-
+        observers.remove(flyable);
     }
 
     protected void conditionsChanged() {
         
     }
 
-    public void getObservers() {
-        System.out.println(observers);
+    public List<Flyable> getObservers() {
+        return observers;
+    }
+
+    void removeAircraft() {
+        observers.removeAll(toRemove);
     }
 }

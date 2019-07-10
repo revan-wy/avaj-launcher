@@ -1,5 +1,6 @@
 package avaj.simulator;
 
+import avaj.simulator.vehicles.Flyable;
 import avaj.weather.Coordinates;
 import avaj.weather.WeatherProvider;
 
@@ -28,6 +29,9 @@ public class WeatherTower extends Tower {
     }
 
     void changeWeather() {
-
+        for (Flyable flyable: this.getObservers()) {
+            flyable.updateConditions();
+        }
+        removeAircraft();
     }
 }
