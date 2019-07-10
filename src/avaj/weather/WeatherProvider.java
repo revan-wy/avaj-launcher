@@ -1,7 +1,5 @@
 package avaj.weather;
 
-import java.util.Random;
-
 public class WeatherProvider {
     private static WeatherProvider weatherProvider;
     private static String[] weather;
@@ -15,23 +13,23 @@ public class WeatherProvider {
     }
 
     public String getCurrentWeather(Coordinates coordinates) {
-        Random rand = new Random();
-        int value = rand.nextInt(4);
-        switch(value) {
+        int mod = coordinates.getSum() % 4;
+        switch(mod) {
             case 0:
-                return "SUN";
+                return "sun";
                 // break;
             case 1:
-                return "RAIN";
+                return "rain";
                 // break;
             case 2:
-                return "FOG";
+                return "fog";
                 // break;
             case 3:
-                return "SNOW";
+                return "snow";
                 // break;
             default:
-                return "SUN";
+                return "sun";
         }
     }
+
 }

@@ -28,4 +28,8 @@ public class Coordinates {
     public int getHeight() {
         return this.height;
     }
+
+    public int getSum() {
+        return (this.longitude + this.latitude + this.height);
+    }
 }
