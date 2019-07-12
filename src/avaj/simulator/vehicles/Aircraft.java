@@ -1,5 +1,8 @@
 package avaj.simulator.vehicles;
 
+import java.io.File;
+import java.io.PrintStream;
+
 import avaj.weather.*;
 
 public class Aircraft {
@@ -32,26 +35,27 @@ public class Aircraft {
     }
 
     void weatherMessage(String weather) {
-        System.out.print(this.getCoordinates().getHeight() + " ");
-        String message;
-        switch(weather) {
-            case "sun":
-                message = sunMessage;
-                break;
-            case "fog":
-                message = fogMessage;
-                break;
-            case "rain":
-                message = rainMessage;
-                break;
-            case "snow":
-                message = snowMessage;
-                break;
-            default:
-                message = sunMessage;
-                break;
-        }
-        System.out.println(this.type + "#" + this.name + "(" + this.id + "): " + message); // Baloon#B1(1): Let
-    }
+        // PrintStream o = new PrintStream(new File("A.txt")); 
 
+            
+            String message;
+            switch(weather) {
+                case "sun":
+                    message = sunMessage;
+                    break;
+                case "fog":
+                    message = fogMessage;
+                    break;
+                case "rain":
+                    message = rainMessage;
+                    break;
+                case "snow":
+                    message = snowMessage;
+                    break;
+                default:
+                    message = sunMessage;
+                    break;
+            }
+            System.out.println(this.type + "#" + this.name + "(" + this.id + "): " + message); // Baloon#B1(1): Let
+    }
 }
