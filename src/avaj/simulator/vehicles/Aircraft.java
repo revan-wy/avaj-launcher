@@ -1,8 +1,5 @@
 package avaj.simulator.vehicles;
 
-import java.io.File;
-import java.io.PrintStream;
-
 import avaj.simulator.DoTheWriting;
 import avaj.weather.*;
 
