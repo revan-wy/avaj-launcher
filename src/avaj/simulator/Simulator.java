@@ -16,7 +16,7 @@ public class Simulator {
             if (line != null) {
                 weatherTower = new WeatherTower();
                 int simulations = Integer.parseInt(line.split(" ")[0]);
-                if (simulations < 0) {
+                if (simulations < 1) {
                     System.out.println("Invalid simulations count " + simulations);
                     System.exit(1);
                 }
@@ -36,6 +36,7 @@ public class Simulator {
                 }
             }
             reader.close();
+            DoTheWriting.fileWriter.close();
         } catch (FileNotFoundException e) {
             System.out.println("Couldn't find file " + arg[0]);
         } catch (IOException e) {

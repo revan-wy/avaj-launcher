@@ -3,6 +3,7 @@ package avaj.simulator.vehicles;
 import java.io.File;
 import java.io.PrintStream;
 
+import avaj.simulator.DoTheWriting;
 import avaj.weather.*;
 
 public class Aircraft {
@@ -56,6 +57,8 @@ public class Aircraft {
                     message = sunMessage;
                     break;
             }
-            System.out.println(this.type + "#" + this.name + "(" + this.id + "): " + message); // Baloon#B1(1): Let
+            String string = new String(this.type + "#" + this.name + "(" + this.id + "): " + message + "\n");
+            DoTheWriting.writeTheThing(string);
+            // System.out.println(this.type + "#" + this.name + "(" + this.id + "): " + message); // Baloon#B1(1): Let
     }
 }

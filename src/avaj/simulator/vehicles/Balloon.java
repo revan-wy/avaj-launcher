@@ -10,7 +10,7 @@ public class Balloon extends Aircraft implements Flyable {
         super(name, coordinates);
         this.type = "Balloon";
         sunMessage = "That's a hot ball of gas.";
-        fogMessage = "Sorry, folks. No more panaramas.";
+        fogMessage = "Sorry, folks. No more panoramas.";
         rainMessage = "The rain is running into the burner!";
         snowMessage = "Increased mass = decreased bouyancy. That is all.";
     }
@@ -74,11 +74,15 @@ public class Balloon extends Aircraft implements Flyable {
     public void registerTower(WeatherTower weatherTower) {
         this.weatherTower = weatherTower;
         weatherTower.register(this);
-        System.out.println("Tower says: " + this.type + "#" + this.name + "(" + this.id + ") registered to weather tower.");
+        String string = new String("Tower says: " + this.type + "#" + this.name + "(" + this.id + ") registered to weather tower.\n");
+        DoTheWriting.writeTheThing(string);
+        // System.out.println("Tower says: " + this.type + "#" + this.name + "(" + this.id + ") registered to weather tower.");
     }
     
     void land() {
-        System.out.println(this.type + "#" + this.name + "(" + this.id + "): " + "Landing at " + this.coordinates.getLatitude() + "N, " + this.coordinates.getLongitude() + "E."); // Baloon#B1(1): Let
+        String string = new String(this.type + "#" + this.name + "(" + this.id + "): " + "Landing at " + this.coordinates.getLatitude() + "N, " + this.coordinates.getLongitude() + "E.\n");
+        DoTheWriting.writeTheThing(string);
+        // System.out.println(this.type + "#" + this.name + "(" + this.id + "): " + "Landing at " + this.coordinates.getLatitude() + "N, " + this.coordinates.getLongitude() + "E."); // Baloon#B1(1): Let
         weatherTower.toRemove.add(this);
     }
 

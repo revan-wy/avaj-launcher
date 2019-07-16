@@ -1,5 +1,6 @@
 package avaj.simulator.vehicles;
 
+import avaj.simulator.DoTheWriting;
 import avaj.simulator.WeatherTower;
 
 import avaj.weather.*;
@@ -13,7 +14,7 @@ public class Helicopter extends Aircraft implements Flyable {
         sunMessage = "Time to get some air.";
         fogMessage = "Manoeuvre out of this fog bank.";
         rainMessage = "Chop the water!";
-        snowMessage = "Snowcones!.";
+        snowMessage = "Snowcones!";
     }
 
     public void updateConditions() {
@@ -75,11 +76,15 @@ public class Helicopter extends Aircraft implements Flyable {
     public void registerTower(WeatherTower weatherTower) {
         this.weatherTower = weatherTower;
         weatherTower.register(this);
-        System.out.println("Tower says: " + this.type + "#" + this.name + "(" + this.id + ") registered to weather tower.");
+        String string = new String("Tower says: " + this.type + "#" + this.name + "(" + this.id + ") registered to weather tower.\n");
+        DoTheWriting.writeTheThing(string);
+        // System.out.println("Tower says: " + this.type + "#" + this.name + "(" + this.id + ") registered to weather tower.");
     }
     
     void land() {
-        System.out.println(this.type + "#" + this.name + "(" + this.id + "): " + "Landing at " + this.coordinates.getLatitude() + "N, " + this.coordinates.getLongitude() + "E."); // Baloon#B1(1): Let
+        String string = new String(this.type + "#" + this.name + "(" + this.id + "): " + "Landing at " + this.coordinates.getLatitude() + "N, " + this.coordinates.getLongitude() + "E.\n");
+        DoTheWriting.writeTheThing(string);
+        // System.out.println(this.type + "#" + this.name + "(" + this.id + "): " + "Landing at " + this.coordinates.getLatitude() + "N, " + this.coordinates.getLongitude() + "E."); // Baloon#B1(1): Let
         weatherTower.toRemove.add(this);
     }
 
