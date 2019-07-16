@@ -33,9 +33,6 @@ public class Aircraft {
     }
 
     void weatherMessage(String weather) {
-        // PrintStream o = new PrintStream(new File("A.txt")); 
-
-            
             String message;
             switch(weather) {
                 case "sun":
@@ -56,6 +53,5 @@ public class Aircraft {
             }
             String string = new String(this.type + "#" + this.name + "(" + this.id + "): " + message + "\n");
             DoTheWriting.writeTheThing(string);
-            // System.out.println(this.type + "#" + this.name + "(" + this.id + "): " + message); // Baloon#B1(1): Let
     }
 }

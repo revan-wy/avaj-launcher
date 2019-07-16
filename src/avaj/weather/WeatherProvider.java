@@ -17,16 +17,12 @@ public class WeatherProvider {
         switch(mod) {
             case 0:
                 return "sun";
-                // break;
             case 1:
                 return "rain";
-                // break;
             case 2:
                 return "fog";
-                // break;
             case 3:
                 return "snow";
-                // break;
             default:
                 return "sun";
         }

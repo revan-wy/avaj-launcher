@@ -10,9 +10,6 @@ public class AircraftFactory {
         int latitude,
         int height) {
             Coordinates coordinates = Coordinates.coordinateMaker(longitude, latitude, height);
-            // System.out.print(coordinates.getLongitude() + "\t");
-            // System.out.print(coordinates.getLatitude() + "\t");
-            // System.out.println(coordinates.getHeight());
             Flyable newFlyable = null;
             switch(type) {
                 case "Helicopter":
@@ -27,7 +24,6 @@ public class AircraftFactory {
                 default:
                     System.out.println("\'" + type + "\'' is not a valid type.");
             }
-            // System.out.println(newFlyable.getCoordinates());
             return newFlyable;
     }
 }

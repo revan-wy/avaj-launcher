@@ -28,11 +28,11 @@ public class Simulator {
                 }
 
                 for (Flyable flyable : flyables) {
-                    flyable.registerTower(weatherTower); // Tower says: Baloon#B1(1) registered to weather tower.
+                    flyable.registerTower(weatherTower);
                 }
 
                 for (int i = 1; i <= simulations; i++) {
-                    weatherTower.changeWeather(); // Baloon#B1(1): Let's enjoy the good weather and take some pics.
+                    weatherTower.changeWeather();
                 }
             }
             reader.close();
@@ -43,8 +43,6 @@ public class Simulator {
             System.out.println("There was an error while reading the file " + arg[0]);
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Specify simulation file");
-        } finally {
-            // Logger.getLogger().close();
-        }
+        } 
     }
 }

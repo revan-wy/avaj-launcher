@@ -5,7 +5,6 @@ import java.io.IOException;
 
 public class DoTheWriting {
     private static String outFile = "simulation.txt";
-    // private static File file = new File(outFile);
     public static FileWriter fileWriter;
     
     private static void makeFileWriter() {
@@ -21,7 +20,6 @@ public class DoTheWriting {
         if (fileWriter == null) {
             makeFileWriter();
         }
-        // System.out.println(fileWriter.);
         try {
             fileWriter.write(string);
         } catch (IOException e) {

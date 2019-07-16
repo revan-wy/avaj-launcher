@@ -77,13 +77,11 @@ public class JetPlane extends Aircraft implements Flyable {
         weatherTower.register(this);
         String string = new String("Tower says: " + this.type + "#" + this.name + "(" + this.id + ") registered to weather tower.\n");
         DoTheWriting.writeTheThing(string);
-        // System.out.println("Tower says: " + this.type + "#" + this.name + "(" + this.id + ") registered to weather tower.");
 	}
     
     void land() {
         String string = new String(this.type + "#" + this.name + "(" + this.id + "): " + "Landing at " + this.coordinates.getLatitude() + "N, " + this.coordinates.getLongitude() + "E.\n");
         DoTheWriting.writeTheThing(string);
-        // System.out.println(this.type + "#" + this.name + "(" + this.id + "): " + "Landing at " + this.coordinates.getLatitude() + "N, " + this.coordinates.getLongitude() + "E."); // Baloon#B1(1): Let
         weatherTower.toRemove.add(this);
     }
 
